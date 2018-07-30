@@ -13,8 +13,10 @@ source venv/bin/activate
 
 #git clone https://github.com/kaushikc92/MagickTable.git
 cd MagickTable
+pip install --trusted-host pypi.python.org -r requirements.txt
 #mkdir media/documents
 #mkdir media/tiles
+chmod -R 777 /MagickTable/media
 
 python manage.py makemigrations
 python manage.py migrate
