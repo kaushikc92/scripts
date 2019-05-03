@@ -21,15 +21,17 @@ set ruler                           " show line and column number
 syntax on               " syntax highlighting
 set showcmd             " show (partial) command in status line
 
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-call plug#begin('~/.vim/plugged')
-
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-
-call plug#end()
+"if empty(glob('~/.vim/autoload/plug.vim'))
+"  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+"    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+"endif
+"
+"call plug#begin('~/.vim/plugged')
+"
+"Plug 'pangloss/vim-javascript'
+"Plug 'mxw/vim-jsx'
+"Plug 'mattn/emmet-vim'
+"Plug 'w0rp/ale'
+"
+"call plug#end()
