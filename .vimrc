@@ -1,4 +1,5 @@
 " configure expanding of tabs for various file types
+au BufWritePost *.go !gofmt -w %
 au BufRead,BufNewFile *.py set expandtab
 au BufRead,BufNewFile *.c set noexpandtab
 au BufRead,BufNewFile *.h set noexpandtab
@@ -33,8 +34,9 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'mattn/emmet-vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+"Plug 'pangloss/vim-javascript'
+"Plug 'mxw/vim-jsx'
+"Plug 'mattn/emmet-vim'
 
 call plug#end()
